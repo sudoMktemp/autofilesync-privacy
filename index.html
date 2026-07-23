@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Privacy policy for the Auto File Sync Android application.">
+  <title>Auto File Sync Privacy Policy</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #17233a;
+      --muted: #55657d;
+      --line: #d7e0ea;
+      --paper: #ffffff;
+      --wash: #f3f7fb;
+      --accent: #0b6e69;
+      --accent-wash: #e3f3f1;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 8% 0%, #dff2ef 0, transparent 31rem),
+        linear-gradient(145deg, var(--wash), #fafbfd 58%, #e8f1f6);
+      color: var(--ink);
+      font-family: "Avenir Next", Avenir, "Segoe UI", sans-serif;
+      line-height: 1.65;
+    }
+
+    main {
+      width: min(100% - 2rem, 52rem);
+      margin: 3.5rem auto;
+      padding: clamp(1.5rem, 5vw, 3.75rem);
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 1.25rem;
+      box-shadow: 0 1.25rem 4rem rgba(23, 35, 58, 0.1);
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin: 0 0 0.75rem;
+      padding: 0.2rem 0.65rem;
+      border-radius: 999px;
+      background: var(--accent-wash);
+      color: var(--accent);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1, h2 { line-height: 1.2; }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 7vw, 3.4rem);
+      letter-spacing: -0.04em;
+    }
+
+    h2 {
+      margin: 2.6rem 0 0.7rem;
+      font-size: 1.25rem;
+      letter-spacing: -0.015em;
+    }
+
+    p, li { color: var(--muted); }
+
+    ul { padding-left: 1.25rem; }
+
+    a { color: var(--accent); font-weight: 650; }
+
+    .metadata {
+      margin-top: 1rem;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+
+    .contact {
+      margin-top: 2.25rem;
+      padding: 1.2rem 1.35rem;
+      border-left: 0.3rem solid var(--accent);
+      background: var(--accent-wash);
+      border-radius: 0 0.75rem 0.75rem 0;
+    }
+
+    footer {
+      margin-top: 2.5rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <p class="eyebrow">Privacy policy</p>
+    <h1>Auto File Sync</h1>
+    <p class="metadata">Effective date: July 23, 2026<br>Package: <code>com.autofilesync</code><br>Publisher: LakeSide Bunny Inc</p>
+
+    <h2>Scope</h2>
+    <p>This policy covers the Android application Auto File Sync in its launch configuration. The app is local-first: cloud backup, Android OS backup, accounts, ads, analytics, and automatic crash reporting are not active in the launch release.</p>
+
+    <h2>Data the app accesses on your device</h2>
+    <p>Auto File Sync needs access to folders that you explicitly select through Android's Storage Access Framework. It may access or store locally:</p>
+    <ul>
+      <li>Folder permission references for source and destination folders that you choose.</li>
+      <li>Schedule names and settings, including copy or move behavior, conflict rules, filters, cadence, and constraints.</li>
+      <li>File metadata needed to perform a sync, including names, sizes, modification dates, and folder positions.</li>
+      <li>Run history such as timestamps, status, counts, transferred bytes, and sanitized error messages.</li>
+      <li>Your Android notification-permission state.</li>
+    </ul>
+    <p>The app does not request Android's broad all-files storage permission.</p>
+
+    <h2>Data transmission and sharing</h2>
+    <p>The launch version does not automatically transmit your schedules, folder references, file metadata, logs, analytics, crash reports, or other app data to LakeSide Bunny Inc or a developer-operated server. The production release does not request Android's <code>INTERNET</code> permission.</p>
+    <p>The app can export sanitized support logs only when you choose that action. Android then opens the system share sheet, and you choose the destination service. Exported logs are designed to remove raw file names, content URIs, paths, URLs, and obvious secrets. Once you send data to another app or service, that destination's privacy practices apply.</p>
+
+    <h2>Retention and deletion</h2>
+    <p>Schedules and run history remain in the app's local storage until you delete them, clear app data, or uninstall the app. You can revoke folder access in Android settings or by changing access in the selected storage provider. The app provides repair guidance when a saved folder permission is no longer available.</p>
+    <p>Because the launch version does not create accounts or store personal data on a developer-operated server, there is no server-side account or data-deletion process.</p>
+
+    <h2>Security</h2>
+    <p>Launch data is stored in the app's Android sandbox using Room. The app does not independently encrypt this local database at rest. Android OS backup is disabled because restored folder permissions are not reliable across devices. The app avoids logging raw folder URIs, secrets, and authentication material; exported support logs are sanitized before they are shared.</p>
+
+    <h2>Future changes</h2>
+    <p>Cloud backup code exists in the source repository but is disabled for the launch release. If cloud backup, accounts, analytics, crash reporting, or ads are introduced, this policy and the Google Play Data Safety declaration will be updated before that version is distributed.</p>
+
+    <h2>Children</h2>
+    <p>Auto File Sync is not designed for or directed to children.</p>
+
+    <section class="contact" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact</h2>
+      <p>For privacy questions or support, contact LakeSide Bunny Inc at <a href="mailto:acrebyte@gmail.com">acrebyte@gmail.com</a>.</p>
+    </section>
+
+    <footer>Review this policy before each release that changes data collection, sharing, backup, analytics, crash reporting, accounts, or support workflows.</footer>
+  </main>
+</body>
+</html>
